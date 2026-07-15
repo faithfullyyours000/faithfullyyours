@@ -1,0 +1,202 @@
+html {
+  scroll-snap-type: y proximity;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: black;
+  color: white;
+  overflow-y: auto;
+}
+
+/* Hero video */
+.hero {
+  position: relative;
+  z-index: 1;
+}
+.hero video {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+/* Text section */
+.text {
+  text-align: center;
+  padding: 50px;
+  font-size: 70px;
+}
+
+/* Video sections */
+  .video-section:first-of-type {
+  scroll-snap-align: start;
+}
+  
+.video-section {
+  min-height: 100vh;
+  scroll-snap-align: start;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 12px;
+  box-sizing: border-box;
+}
+
+.video-section {
+  margin-bottom: 120px;
+}
+
+/* Vimeo videos */
+.video-section iframe {
+  width: 90vw;
+  height: 90vh;
+  border: none;
+  display: block;
+}
+
+.video-title {
+  display: block;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  text-decoration: none;
+  color: white;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+
+/* Menu */
+.menu-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 2000;
+
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: -220px;
+  width: 220px;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding-top: 60px;
+  transition: left 0.3s ease;
+  z-index: 1000;
+  overflow-y: auto; 
+}
+
+.menu-button.dark {
+  color: black;
+}
+
+.menu-button.light {
+  color: white;
+}
+
+.menu.open {
+  left: 0;
+}
+
+.menu a {
+  display: block;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 100px 20px;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.about-container h1 {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.about-container p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.back-button {
+  display: inline-block;
+  margin-bottom: 40px;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+.nav-arrows {
+  position: fixed;
+  top: 12vh;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.left-arrow,
+.right-arrow {
+  position: absolute;
+  pointer-events: auto;
+  color: white;
+  text-decoration: none;
+  line-height: 1.3;
+}
+
+.left-arrow {
+  left: 40px;
+  transition: opacity 0.3s ease;
+}
+
+.left-arrow.hidden {
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.right-arrow {
+  right: 40px;
+  text-align: right;
+}
+
+.nav-arrows a {
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 2px;
+  opacity: 0.9;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.project-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-page iframe {
+  width: 90vw;
+  height: 90vh;
+  border: none;
+}
