@@ -137,6 +137,14 @@ body {
   margin-bottom: 20px;
 }
 
+.about-footer {
+    margin-top: 80px;
+    padding-bottom: 30px;
+    text-align: center;
+    font-style: italic;
+    font-size: 14px;
+}
+
 .back-button {
   display: inline-block;
   margin-bottom: 40px;
